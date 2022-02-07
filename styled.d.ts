@@ -5,8 +5,10 @@ const combined = {
     ...themeB,
 }
 
+
 declare module 'styled-components' {
-    type Theme = typeof combined
+    type CombinedTheme = typeof combined;
+    type Theme = CombinedTheme
 
     /* eslint-disable @typescript-eslint/no-empty-interface */
     export interface DefaultTheme extends Theme {}
